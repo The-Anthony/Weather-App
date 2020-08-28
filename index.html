@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Icona affiancata all'URL-->
+    <link rel="icon" href="img/url-icon.png">
+
+    <!-- FOGLIO DI STILE CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- LINK A GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <title>Enjoy Your Weather</title>
+  </head>
+  <body>
+
+    <div class="title">
+        <img src="img/Logo_concluso.png" alt="Logo del sito: Enjoy your Weather" class="logo">
+        <p>Tutto il tuo meteo. Sempre preciso. Sempre aggiornato. Per <span>goderti</span> le tue giornate senza pensiero</p>
+    </div>
+
+    <div class="center">
+
+        <div class="input">
+          <input type="text" class="city-input" placeholder="Inserisci qua la tua città (es. Roma, IT)" id="input" value="">
+          <div class="icon"><img src="img/Search-Icon.png" alt="Icona lente di ingrandimento utilizzata per avviare la ricerca"></div>
+          <div class="secondIcon"><img src="img/geolocalizzazione.png" alt="Icona per la geolocalizzazione utilizzata per sfruttare quest'ultima"></div>
+        </div>
+
+        <div class="principal-result">
+          <div class="temperature">
+            <h2 class="medium-temperature">--°</h2>
+          </div>
+
+          <div class="city">
+            <h3 class="main-city">La tua città</h3>
+          </div>
+
+        </div>
+
+    </div>
+
+    <div class="data">
+        <div class="data-description">
+          <p>Temp. Max</p>
+          <p>Temp. Min</p>
+          <p>Pressione</p>
+          <p>Vento</p>     
+          <p>Umidità</p>
+
+        </div>
+
+        <div class="data-number">
+          <p class="max-temp">--</p>
+          <p class="min-temp">--</p>
+          <p class="pressure">--</p>
+          <p class="wind">--</p>
+          <p class="humidity">--</p>
+        </div>
+    </div>
+   
+
+
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    overflow: hidden;
+
+    background-color: #302e2f;
+    color: #f0bd18; 
+
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+    overflow-y: auto;
+}
+
+/*
+PARTE INIZIALE -- LOGO E FRASE INTRODUTTIVA
+*/
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.title img {
+    height: 12vh;
+    padding-top: 2vh;
+}
+.title p {
+    height: 2vh;
+    color: aliceblue;
+}
+.title p span {color: #f0bd18;}
+
+/*
+PARTE CENTRALE -- INPUT E RISULTATI PRINCIPALI
+*/
+
+.center {
+    height: 35vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+
+    width: 50%;
+    height: 100%;
+}
+
+.input input {
+    margin-left: 20%;
+    padding-left: 20px;
+    height: 8vh;
+    width: 60vh;
+    border-radius: 20px;
+    border: 0;
+    font-size: 1.1em;
+    background-color: #343a40;
+    color: aliceblue;
+}
+
+input:focus {outline: none;}
+::placeholder {color: aliceblue;}
+.icon:hover{cursor: pointer;}
+
+.icon {
+    position: relative;
+    right: 8vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon img {width: 33px;}
+
+
+.secondIcon {
+    width: 56px;
+    height: 56px;
+    background-color: #343a40;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.secondIcon:hover{cursor: pointer;}
+.secondIcon img {width: 30px;}
+
+.principal-result {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    width: 50%;
+    height: 100%;
+}
+
+.temperature {
+    margin: 3vh auto 0 auto;
+    padding-bottom: 0; 
+    font-size: 2em;
+}
+.temperature h2 {margin: 0; padding: 0;}
+.city h3 {margin: 0; padding: 0;}
+
+
+.city {
+    color: aliceblue;
+    margin-top: 1vh;
+    padding-top: 0;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+
+
+/*
+PARTE FINALE -- RISULTATI 
+*/
+
+.data {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 41vh;
+}
+
+.data-description, .data-number {
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.data-description p, .data-number p {
+    line-height: 0.6em;
+    font-size: 1.2em;
+}
+
+.data-description p {
+    color: aliceblue;   
+}
+
+.avviso-errore {
+    background-color : #343a40;
+    color: #f0bd18;
+}
+.swal-button {
+    color: #f0bd18;
+    background-color : #1e2325;
+    border: 1px solid aliceblue;
+}
+.swal-button:hover {background-color: #1e2325 !important}
+
+.swal-title {color: #f0bd18;}
+.swal-text {color: aliceblue;}
+
+/*
+MEDIA QUERY PER TABLET
+*/
+
+@media only screen and (min-width:561px) and (max-width: 1024px) {
+
+    body {height: auto;}
+    .title img {height: 120px;}
+    .center {
+        flex-direction: column; 
+        margin-top: 10px;
+        height: auto;
+
+    }
+    .input {width: 90%;}
+    .input input {
+        margin: 0 auto;
+        padding: 0 auto;
+        width: 80%;
+    }
+    .icon {right: 15%;}
+    .principal-result, .data {font-size: 1.5em;}
+    .data {height: auto;}
+}
+
+/*
+MEDIA QUERY PER MOBILE
+*/
+
+@media only screen and (max-width:560px) {
+
+    body {height: auto;}
+    .center {
+        height: auto;
+        flex-direction: column;
+        margin-top: 15px;
+    }    
+    .input {
+        width: 95%;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    .input input {
+        margin: 0 auto;
+        padding: 0 auto;
+        width: 95%;
+    }
+    .icon {
+        position: static;
+        border-radius: 20px;
+        background-color: #343a40;
+        margin-top: 10px;
+        width: 30%;
+        height: 50px;
+    }
+    .secondIcon {
+        border-radius: 20px;
+        margin-top: 10px;
+        width: 30%;
+        height: 50px;
+    }
+
+    .temperature {
+        margin: 3vh auto auto auto;
+        padding-bottom: auto; 
+    }
+    .temperature h2 {margin: auto; padding: auto;}
+    .city h3 {margin: auto; padding: auto;}
+
+    .data {width: 90%; height: auto;}
+}
